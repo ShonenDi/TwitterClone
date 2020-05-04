@@ -22,6 +22,7 @@ public class TwitterUsers extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_twitter_users);
+        setTitle("Twitter users");
         toolbar = findViewById(R.id.myToolbar);
         setSupportActionBar(toolbar);
 
@@ -38,8 +39,9 @@ public class TwitterUsers extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId()==R.id.logOutIten){
+        if(item.getItemId()==R.id.logOutItem){
             ParseUser.getCurrentUser().logOut();
+            finish();
             Intent intent = new Intent(TwitterUsers.this,LogIn.class);
             startActivity(intent);
         }
