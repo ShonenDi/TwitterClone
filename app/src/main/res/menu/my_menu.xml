@@ -7,8 +7,9 @@
         android:title="LogOut"
         app:showAsAction="always" />
     <item
-        android:id="@+id/otherItem"
+        android:id="@+id/sendTwitt"
+        android:icon="@drawable/ic_send_black_24dp"
         android:orderInCategory="100"
-        android:title="other"
-        app:showAsAction="never"/>
+        app:showAsAction="always"
+        android:title="TODO" />
 </menu>
